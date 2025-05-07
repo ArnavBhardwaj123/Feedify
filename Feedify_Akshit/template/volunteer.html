@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard - Feedify</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/volunteer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="volunteer-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h1>Feedify</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h1>Volunteer Dashboard</h1>
+                <p>Help collect and distribute food to those in need</p>
+            </div>
+
+            <!-- Available Donations -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>Available Donations</h2>
+                    <div id="availableDonations" class="donations-list">
+                        <p class="empty-state">No available donations at the moment. Check back later!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Claimed Donations -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>My Claimed Donations</h2>
+                    <div id="claimedDonations" class="donations-list">
+                        <p class="empty-state">You haven't claimed any donations yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="notification-content">
+            <h3 id="notificationTitle">New Food Donation Available!</h3>
+            <p id="notificationMessage">A new food donation is available for pickup nearby.</p>
+        </div>
+        <button id="closeNotification" class="notification-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="../static/js/data.js"></script>
+    <script src="../static/js/notification.js"></script>
+    <script src="../static/js/volunteer.js"></script>
+</body>
+</html>

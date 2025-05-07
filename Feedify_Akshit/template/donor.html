@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard - Feedify</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/donor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="donor-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h1>Feedify</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h1>Donor Dashboard</h1>
+                <p>Share your excess food with those in need</p>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <form id="donationForm">
+                        <div class="form-group">
+                            <label for="title">Food Title*</label>
+                            <input type="text" id="title" name="title" placeholder="E.g., Fresh Sandwiches, Cooked Rice & Curry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity* (servings/portions)</label>
+                            <input type="number" id="quantity" name="quantity" placeholder="E.g., 10" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description (optional)</label>
+                            <textarea id="description" name="description" placeholder="Describe the food, any allergens, etc." rows="3"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryTime">Best Before*</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-clock"></i>
+                                    <input type="datetime-local" id="expiryTime" name="expiryTime" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Pickup Location*</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="location" name="location" placeholder="Full address" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photo">Photo (optional)</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" class="file-input">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                                <i class="fas fa-upload"></i> Post Food Donation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- My Donations Section -->
+            <div class="my-donations">
+                <h2>My Donations</h2>
+                <div class="card">
+                    <div id="myDonationsList" class="empty-state">
+                        <p>Your past donations will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <div class="notification-content">
+            <h3 id="notificationTitle">New Donation Posted!</h3>
+            <p id="notificationMessage">Your donation has been posted successfully. Volunteers will be notified.</p>
+        </div>
+        <button id="closeNotification" class="notification-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="../static/js/data.js"></script>
+    <script src="../static/js/notification.js"></script>
+    <script src="../static/js/donor.js"></script>
+</body>
+</html>

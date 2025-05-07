@@ -1,0 +1,81 @@
+/* Admin Theme */
+.admin-theme {
+    --primary-color: #8b5cf6;
+    --primary-dark: #7c3aed;
+    --primary-light: #f3e8ff;
+    background-color: #f5f3ff;
+}
+
+.admin-theme .dashboard-header {
+    background-color: #8b5cf6;
+}
+
+.admin-theme .logo-icon {
+    background-color: #8b5cf6;
+}
+
+.admin-theme .logo h1 {
+    color: #8b5cf6;
+}
+
+.admin-theme .nav-links a:hover {
+    color: #8b5cf6;
+}
+
+/* Stats Cards */
+.stats-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.admin-theme .stat-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-theme .stat-info p {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.admin-theme .stat-info h3 {
+    font-size: 1.875rem;
+    color: #8b5cf6;
+    margin-bottom: 0;
+}
+
+.admin-theme .stat-icon {
+    background-color: #f3e8ff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-theme .stat-icon i {
+    font-size: 1.25rem;
+    color: #8b5cf6;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
